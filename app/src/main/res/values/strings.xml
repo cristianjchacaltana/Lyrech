@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Lyrech</string>
+
+    <string name="login_email_hint">Email</string>
+    <string name="login_password_hint">Password</string>
+    <string name="login_button_sign_in">Sign In</string>
+    <string name="login_text_divider">OR</string>
+    <string name="login_msg_two"> Do not have an account? </string>
+    <string name="login_text_register">Sign up.</string>
+</resources>

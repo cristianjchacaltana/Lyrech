@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "493228760953",
+    "firebase_url": "https://lyrech-545e1.firebaseio.com",
+    "project_id": "lyrech-545e1",
+    "storage_bucket": "lyrech-545e1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:493228760953:android:e508c901995972d4",
+        "android_client_info": {
+          "package_name": "com.firebaseapp.lyrech.lyrech"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "493228760953-laspm2ndugdn87n666h3b6fk4gnqc51m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.firebaseapp.lyrech.lyrech",
+            "certificate_hash": "cf2346d72b31b7276f250f68e80662e3c3dd2a7a"
+          }
+        },
+        {
+          "client_id": "493228760953-jasg8irjcc2pvnapikrjlioi1nq1q9d0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBl-ycWQOWe9p01G6IrJ1dx1y9_CZGlJn4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "493228760953-jasg8irjcc2pvnapikrjlioi1nq1q9d0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

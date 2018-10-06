@@ -11,4 +11,8 @@
     <dimen name="shape_rectangle_corners">4dp</dimen>
     <dimen name="shape_rectangle_padding">16dp</dimen>
     <dimen name="shape_rectangle_stroke">1dp</dimen>
+
+    <dimen name="progress_progressbar_width">172dp</dimen>
+    <dimen name="progress_image_margin">16dp</dimen>
+
 </resources>

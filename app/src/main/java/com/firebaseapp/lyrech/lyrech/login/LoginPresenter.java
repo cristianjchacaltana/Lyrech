@@ -4,22 +4,26 @@ public class LoginPresenter implements ILoginPresenter{
 
     private static final String TAG = "LoginPresenter";
 
-    private ILoginView loginView;
+    private ILoginView mLoginView;
+    private ILoginInteractor mLoginInteractor;
 
 
 
     public LoginPresenter(ILoginView loginView){
-        this.loginView = loginView;
+        this.mLoginView = loginView;
+        mLoginInteractor = new LoginInteractor();
     }
 
 
 
     @Override
     public void validateLogin(String email, String password) {
-        if(loginView != null){
-            loginView.disableButton();
-            loginView.showProgress();
+        if(mLoginView != null){
+            mLoginView.disableButton();
+            mLoginView.showProgress();
         }
+
+        mLoginInteractor.doLogin(email, password);
     }
 
 }

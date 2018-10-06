@@ -14,6 +14,7 @@ import com.firebaseapp.lyrech.lyrech.R;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import butterknife.OnTextChanged;
 
 public class LoginActivity  extends AppCompatActivity
                             implements ILoginView{
@@ -27,6 +28,8 @@ public class LoginActivity  extends AppCompatActivity
     @BindView(R.id.relativelayout_login_container) RelativeLayout mLoginContainerRelativeLayout;
     @BindView(R.id.relativelayout_progress) RelativeLayout mProgressRelativeLayout;
 
+    private ILoginPresenter mLoginPresenter;
+
 
 
     @Override
@@ -34,6 +37,8 @@ public class LoginActivity  extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
+
+        mLoginPresenter = new LoginPresenter(this);
     }
 
 
@@ -73,6 +78,9 @@ public class LoginActivity  extends AppCompatActivity
     @OnClick(R.id.button_log_in)
     @Override
     public void handleLogIn() {
-        Log.d(TAG, "handleLogIn: click del usuario");
+        mLoginPresenter.validateLogin(mEmailEditText.getText().toString(),
+                                    mPasswordEditText.getText().toString());
     }
+
+
 }

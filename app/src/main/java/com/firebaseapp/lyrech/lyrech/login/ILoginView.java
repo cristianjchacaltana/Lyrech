@@ -10,4 +10,7 @@ public interface ILoginView extends IButton, IProgress {
 
     void handleLogIn();
 
+    void onTextChangedEventEmail();
+    void onTextChangedEventPassword();
+
 }

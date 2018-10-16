@@ -26,4 +26,12 @@ public class LoginPresenter implements ILoginPresenter{
         mLoginInteractor.doLogin(email, password);
     }
 
+    @Override
+    public void enableButtonView(String email, String password) {
+        if ( email.length()!=0 && password.length()!=0 ){
+            mLoginView.enableButton();
+        } else {
+            mLoginView.disableButton();
+        }
+    }
 }

@@ -82,5 +82,17 @@ public class LoginActivity  extends AppCompatActivity
                                     mPasswordEditText.getText().toString());
     }
 
+    @OnTextChanged(R.id.edittext_login_email)
+    @Override
+    public void onTextChangedEventEmail() {
+        mLoginPresenter.enableButtonView(mEmailEditText.getText().toString(),
+                                        mPasswordEditText.getText().toString());
+    }
 
+    @OnTextChanged(R.id.edittext_login_password)
+    @Override
+    public void onTextChangedEventPassword() {
+        mLoginPresenter.enableButtonView(mEmailEditText.getText().toString(),
+                                        mPasswordEditText.getText().toString());
+    }
 }

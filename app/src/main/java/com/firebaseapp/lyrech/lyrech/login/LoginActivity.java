@@ -39,6 +39,13 @@ public class LoginActivity  extends AppCompatActivity
         ButterKnife.bind(this);
 
         mLoginPresenter = new LoginPresenter(this);
+        mLoginPresenter.onCreate();
+    }
+
+    @Override
+    protected void onDestroy() {
+        mLoginPresenter.onDestroy();
+        super.onDestroy();
     }
 
 

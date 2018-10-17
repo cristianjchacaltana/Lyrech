@@ -1,20 +1,37 @@
 package com.firebaseapp.lyrech.lyrech.login;
 
+import com.firebaseapp.lyrech.lyrech.lib.GreenRobotEventBus;
+import com.firebaseapp.lyrech.lyrech.lib.IEventBus;
+import com.firebaseapp.lyrech.lyrech.login.events.LoginEvent;
+
+import org.greenrobot.eventbus.Subscribe;
+
 public class LoginPresenter implements ILoginPresenter{
 
     private static final String TAG = "LoginPresenter";
 
     private ILoginView mLoginView;
     private ILoginInteractor mLoginInteractor;
-
+    private IEventBus mEventBus;
 
 
     public LoginPresenter(ILoginView loginView){
         this.mLoginView = loginView;
         mLoginInteractor = new LoginInteractor();
+        mEventBus = GreenRobotEventBus.getInstance();
     }
 
 
+
+    @Override
+    public void onCreate() {
+        mEventBus.register(this);
+    }
+
+    @Override
+    public void onDestroy() {
+        mEventBus.unRegister(this);
+    }
 
     @Override
     public void validateLogin(String email, String password) {
@@ -33,5 +50,12 @@ public class LoginPresenter implements ILoginPresenter{
         } else {
             mLoginView.disableButton();
         }
+    }
+
+
+    @Override
+    @Subscribe
+    public void onLoginEvent(LoginEvent event) {
+
     }
 }

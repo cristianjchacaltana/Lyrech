@@ -6,7 +6,7 @@ import com.firebaseapp.lyrech.lyrech.domain.IProgress;
 public interface ILoginView extends IButton, IProgress {
 
     void navigateToMainScreen();
-    void loginError(String error);
+    void loginError();
 
     void handleLogIn();
 

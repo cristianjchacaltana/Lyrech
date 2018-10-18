@@ -1,5 +1,7 @@
 package com.firebaseapp.lyrech.lyrech.login;
 
+import android.util.Log;
+
 import com.firebaseapp.lyrech.lyrech.lib.GreenRobotEventBus;
 import com.firebaseapp.lyrech.lyrech.lib.IEventBus;
 import com.firebaseapp.lyrech.lyrech.login.events.LoginEvent;
@@ -57,5 +59,28 @@ public class LoginPresenter implements ILoginPresenter{
     @Subscribe
     public void onLoginEvent(LoginEvent event) {
 
+        switch (event.getEventType()) {
+            case LoginEvent.SIGNIN_SUCCESS:
+                onSignInSuccess();
+                break;
+            case LoginEvent.SIGNIN_ERROR:
+                onSignInError();
+                break;
+        }
+
+    }
+
+    private void onSignInSuccess() {
+        if ( mLoginView!=null ) {
+            mLoginView.hideProgress();
+            mLoginView.navigateToMainScreen();
+        }
+    }
+
+    private void onSignInError() {
+        if ( mLoginView!=null ) {
+            mLoginView.hideProgress();
+            mLoginView.loginError();
+        }
     }
 }

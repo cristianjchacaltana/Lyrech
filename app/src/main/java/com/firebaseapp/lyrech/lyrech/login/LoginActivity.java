@@ -72,11 +72,11 @@ public class LoginActivity  extends AppCompatActivity
 
     @Override
     public void navigateToMainScreen() {
-
+        Log.d(TAG, "navigateToMainScreen: MainActivity");
     }
 
     @Override
-    public void loginError(String error) {
+    public void loginError() {
         Snackbar.make(mLoginContainerRelativeLayout,
                     R.string.login_error_one,
                     Snackbar.LENGTH_SHORT).show();

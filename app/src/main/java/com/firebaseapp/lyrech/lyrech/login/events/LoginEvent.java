@@ -5,6 +5,7 @@ public class LoginEvent {
     public static final int SIGNIN_ERROR = 0;
     public static final int SIGNIN_SUCCESS = 1;
     public static final int FAILED_TO_RECOVER_SESSION = 2;
+    public static final int SESSION_SUCCESSFULLY_RECOVERS = 3;
 
     private int mEventType;
 

@@ -62,6 +62,13 @@ public class LoginRepository implements ILoginRepository{
     @Override
     public void checkAlreadyAuthenticated() {
         Log.d(TAG, "checkAlreadyAuthenticated: check sesion");
+
+        if (FirebaseAuth.getInstance().getCurrentUser() != null){
+            postEvent(LoginEvent.SESSION_SUCCESSFULLY_RECOVERS);
+        } else {
+            postEvent(LoginEvent.FAILED_TO_RECOVER_SESSION);
+        }
+
     }
 
 

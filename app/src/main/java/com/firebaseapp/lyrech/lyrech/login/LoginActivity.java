@@ -1,5 +1,6 @@
 package com.firebaseapp.lyrech.lyrech.login;
 
+import android.content.Intent;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,6 +11,8 @@ import android.widget.EditText;
 import android.widget.RelativeLayout;
 
 import com.firebaseapp.lyrech.lyrech.R;
+import com.firebaseapp.lyrech.lyrech.main.MainActivity;
+import com.google.firebase.auth.FirebaseAuth;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -40,6 +43,7 @@ public class LoginActivity  extends AppCompatActivity
 
         mLoginPresenter = new LoginPresenter(this);
         mLoginPresenter.onCreate();
+        mLoginPresenter.checkForAuthenticatedUser();
     }
 
     @Override
@@ -72,7 +76,9 @@ public class LoginActivity  extends AppCompatActivity
 
     @Override
     public void navigateToMainScreen() {
-        Log.d(TAG, "navigateToMainScreen: MainActivity");
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        finish();
     }
 
     @Override

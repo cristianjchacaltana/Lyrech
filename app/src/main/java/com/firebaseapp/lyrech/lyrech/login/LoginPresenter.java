@@ -35,6 +35,14 @@ public class LoginPresenter implements ILoginPresenter{
         mEventBus.unRegister(this);
     }
 
+
+    @Override
+    public void checkForAuthenticatedUser() {
+        if ( mLoginView!=null ) {
+            mLoginView.navigateToMainScreen();
+        }
+    }
+
     @Override
     public void validateLogin(String email, String password) {
         if(mLoginView != null){
@@ -66,13 +74,18 @@ public class LoginPresenter implements ILoginPresenter{
             case LoginEvent.SIGNIN_ERROR:
                 onSignInError();
                 break;
+            case LoginEvent.SESSION_SUCCESSFULLY_RECOVERS:
+                checkForAuthenticatedUser();
+                break;
+            case LoginEvent.FAILED_TO_RECOVER_SESSION:
+                onFailedToRecoverSession();
+                break;
         }
 
     }
 
     private void onSignInSuccess() {
         if ( mLoginView!=null ) {
-            mLoginView.hideProgress();
             mLoginView.navigateToMainScreen();
         }
     }
@@ -82,5 +95,9 @@ public class LoginPresenter implements ILoginPresenter{
             mLoginView.hideProgress();
             mLoginView.loginError();
         }
+    }
+
+    private void onFailedToRecoverSession() {
+        Log.d(TAG, "onFailedToRecoverSession");
     }
 }

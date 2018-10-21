@@ -7,6 +7,7 @@ public interface ILoginPresenter {
     void onCreate();
     void onDestroy();
 
+    void checkForAuthenticatedUser();
     void validateLogin(String email, String password);
     void enableButtonView(String email, String password);
     void onLoginEvent(LoginEvent event);

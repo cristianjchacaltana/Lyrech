@@ -6,7 +6,7 @@ import java.util.TimerTask;
 public class SplashScreenPresenter implements ISplashScreenPresenter{
 
     private static final String TAG = "SplashScreenPresenter";
-    public static final long SPLASH_SCREEN_DELAY = 20000;
+    public static final long SPLASH_SCREEN_DELAY = 5000;
 
     private ISplashScreenView mSplashScreenView;
 

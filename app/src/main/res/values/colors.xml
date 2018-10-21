@@ -10,6 +10,8 @@
     <color name="primaryTextColor">#ffffff</color>
     <color name="secondaryTextColor">#000000</color>
 
+    <color name="buttonSignIn">#02cdae</color>
+
     <color name="primaryBackgroundColor">#fafafa</color>
     <color name="primaryLightBackgroundColor">#ffffff</color>
     <color name="primaryDarkBackgroundColor">#c7c7c7</color>

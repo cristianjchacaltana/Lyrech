@@ -13,4 +13,9 @@
         <item name="android:textStyle">normal</item>
     </style>
 
+
+    <style name="Button" parent="TextAppearance.AppCompat.Widget.Button">
+        <item name="android:textColor">@color/primaryTextColor</item>
+    </style>
+
 </resources>

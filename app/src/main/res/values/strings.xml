@@ -9,4 +9,7 @@
     <string name="login_text_register">Sign up.</string>
     <string name="login_error_one">Error al Iniciar Sesion</string>
 
+    <string name="front_button_sign_in">Sign In</string>
+    <string name="front_button_sign_up">Sign Up</string>
+
 </resources>

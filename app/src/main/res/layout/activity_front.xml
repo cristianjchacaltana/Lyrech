@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/linearlayout_front_main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/material_design_margin"
+    android:orientation="vertical"
+    android:weightSum="100"
+    android:background="@color/primaryColor"
+    tools:context=".front.FrontActivity">
+
+    <LinearLayout
+        android:id="@+id/linearlayout_front_logo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="50"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/image_front_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearlayout_front_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="50"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/button_front_sign_in"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="@dimen/material_design_margin"
+            android:background="@drawable/shape_rectangle"
+            android:backgroundTint="@color/buttonSignIn"
+            android:text="@string/front_button_sign_in"
+            android:textAppearance="@style/Button"/>
+
+        <Button
+            android:id="@+id/button_front_sign_up"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/shape_rectangle"
+            android:backgroundTint="@color/secondaryColor"
+            android:text="@string/front_button_sign_up"
+            android:textAppearance="@style/Button"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -12,4 +12,8 @@
     <string name="front_button_sign_in">Sign In</string>
     <string name="front_button_sign_up">Sign Up</string>
 
+    <string name="profile_title">With which profile do you want to operate?</string>
+    <string name="profile_profile_one">Investor</string>
+    <string name="profile_profile_two">Starup</string>
+
 </resources>

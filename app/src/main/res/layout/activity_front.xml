@@ -9,7 +9,7 @@
     android:padding="@dimen/material_design_margin"
     android:orientation="vertical"
     android:weightSum="100"
-    android:background="@color/primaryColor"
+    android:background="@drawable/front"
     tools:context=".front.FrontActivity">
 
     <LinearLayout
@@ -22,9 +22,9 @@
 
         <ImageView
             android:id="@+id/image_front_logo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/logo"/>
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/logotipo"/>
 
     </LinearLayout>
 
